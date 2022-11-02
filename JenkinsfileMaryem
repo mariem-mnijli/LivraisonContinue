@@ -9,6 +9,11 @@ pipeline {
         echo 'checkout stage'
            }
   }
+stage("Docker") {
+            steps {
+                sh "ansible-playbook ansible/docker.yml -i ansible/inventory/host.yml"
+            }
+        }
   
   
   
