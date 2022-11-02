@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('git checkout') {
       steps {
-        git branch : 'maryem',
-        url: 'https://github.com/khaoula-RAJHI/CloudonomicsSpring.git',
+        git branch : 'master',
+        url: 'https://github.com/mariem-mnijli/LivraisonContinue.git',
         credentialsId: '55bb9522-d6da-44f5-a981-79141d05964c';
         echo 'checkout stage'
            }
