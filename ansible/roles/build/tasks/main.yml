@@ -1,5 +1,5 @@
 ---
 # tasks file for build
   - name: build app
-    shell: ng build --configuration production
+    shell: ~/.nvm/versions/node/v19.0.1/bin/ng build --configuration production
    
