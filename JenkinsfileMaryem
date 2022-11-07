@@ -9,6 +9,11 @@ pipeline {
         echo 'checkout stage'
            }
   }
+  stage("nom install") {
+            steps {
+                sh "npm install"
+            }
+        }
   stage("Docker") {
             steps {
                 sh "ansible-playbook ansible/build.yml -i ansible/inventory/host.yml"
