@@ -1,4 +1,4 @@
 ---
 # tasks file for build
 - name: build app
-  shell: /var/lib/jenkins/workspace/LC/ng build --configuration production
+  shell: ng build --configuration production
