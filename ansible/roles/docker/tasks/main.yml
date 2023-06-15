@@ -2,9 +2,9 @@
 # tasks file for docker
  - name: create docker image
    docker_image:
-      name: LivraisonContinue
+      name: devops
       build:
-         path: /var/lib/jenkins/workspace/LC                 
+         path: /var/lib/jenkins/workspace/LivraisonContinue                 
          pull: no
       source: build
       state: present
