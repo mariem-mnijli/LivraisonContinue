@@ -1,6 +1,7 @@
 ---
 - name: Deploy application on Kubernetes
   hosts: 185.192.96.18
+  remote_user: root
   tasks:
     - name: Create deployment
       k8s:
