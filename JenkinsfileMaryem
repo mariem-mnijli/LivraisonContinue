@@ -26,6 +26,12 @@ pipeline {
                 sh "ansible-playbook ansible/docker-registry.yml -i ansible/inventory/host.yml"
             }
         }
+
+ stage("DeployK8S") {
+            steps {
+                sh "ansible-playbook ansible/kubernetes.yml -i ansible/inventory/host.yml"
+            }
+        }
   
   }
   }
