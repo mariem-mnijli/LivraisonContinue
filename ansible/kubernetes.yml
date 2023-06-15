@@ -1,0 +1,47 @@
+---
+- name: Deploy application on Kubernetes
+  hosts: localhost
+  tasks:
+    - name: Create deployment
+      k8s:
+        api_version: apps/v1
+        kind: Deployment
+        name: my-deployment
+        namespace: my-namespace
+        definition:
+          metadata:
+            labels:
+              app: my-app
+          spec:
+            replicas: 3
+            selector:
+              matchLabels:
+                app: my-app
+            template:
+              metadata:
+                labels:
+                  app: my-app
+              spec:
+                containers:
+                  - name: my-container
+                    image: mariemmnijli/devops:latest
+                    ports:
+                      - containerPort: 4200
+    - name: Create service
+      k8s:
+        api_version: v1
+        kind: Service
+        name: my-service
+        namespace: my-namespace
+        definition:
+          metadata:
+            labels:
+              app: my-app
+          spec:
+            selector:
+              app: my-app
+            ports:
+              - protocol: TCP
+                port: 4200
+                targetPort: 4200
+            type: LoadBalancer
