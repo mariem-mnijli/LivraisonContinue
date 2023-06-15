@@ -1,7 +1,6 @@
-102.219.178.33
 
 [server]
-localhost ansible_host=102.219.178.33  ansible_user=root
+102.219.178.33
 
 [server:vars]
 ansible_python_interpreter= /usr/bin/python3
