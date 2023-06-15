@@ -29,7 +29,7 @@ pipeline {
 
 stage("ping") {
             steps {
-                sh "ansible all -m ping -u root"
+                sh "sudo ansible all -m ping -u root"
             }
         }
  stage("DeployK8S") {
