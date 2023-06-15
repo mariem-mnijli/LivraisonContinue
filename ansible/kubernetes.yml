@@ -1,6 +1,6 @@
 ---
 - name: Deploy application on Kubernetes
-  hosts: master
+  hosts: 185.192.96.18
   tasks:
     - name: Create deployment
       k8s:
