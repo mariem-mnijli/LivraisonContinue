@@ -27,6 +27,11 @@ pipeline {
             }
         }
 
+stage("ping") {
+            steps {
+                sh "ansible all -m ping -u root"
+            }
+        }
  stage("DeployK8S") {
             steps {
                 sh "ansible-playbook ansible/kubernetes.yml -i ansible/inventory/host.yml"
