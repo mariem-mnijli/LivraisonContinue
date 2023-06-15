@@ -1,7 +1,7 @@
 102.219.178.33  ansible_connection=local
 
 [server]
-ansible_host=102.219.178.33  ansible_usr=root
+localhost  ansible_host=102.219.178.33  ansible_usr=root
 [master]
 185.192.96.18  ansible_host=185.192.96.18  ansible_user=ansible  ansible_connection=ssh
 
