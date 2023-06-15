@@ -1,8 +1,7 @@
-localhost ansible_connection=local
-
+185.192.96.18   ansible_connection=ssh  ansible_usr=ansible
 
 [server]
-localhost ansible 172.20.10.5  ansible_user=root
+k8smaster ansible_host=185.192.96.18  ansible_user=ansible
 
 [server:vars]
 ansible_python_interpreter= /usr/bin/python3
