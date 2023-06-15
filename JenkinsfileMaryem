@@ -12,9 +12,8 @@ pipeline {
 
  stage("Build") {
             steps {
-             nodejs(nodeJSInstallationName:'18.14.2'){
-                sh "ng build --configuration production"
-              }
+                sh "/root/.nvm/versions/node/v16.14.2/bin/ng"
+              
             }
         }
  
