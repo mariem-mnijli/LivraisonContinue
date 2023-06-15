@@ -9,13 +9,6 @@ pipeline {
         echo 'checkout stage'
            }
   }
-
- stage("Build") {
-            steps {
-                sh "/root/.nvm/versions/node/v16.14.2/bin/ng"
-              
-            }
-        }
  
  stage("Docker") {
             steps {
