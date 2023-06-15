@@ -1,7 +1,7 @@
 ---
 - name: Deploy application on Kubernetes
-  hosts: 185.192.96.18
-  remote_user: root
+  hosts: master
+  gather_facts: false
   tasks:
     - name: Create deployment
       k8s:
@@ -27,7 +27,7 @@
                   - name: my-container
                     image: mariemmnijli/devops:latest
                     ports:
-                      - containerPort: 4200
+                      - containerPort: 8080
     - name: Create service
       k8s:
         api_version: v1
@@ -44,5 +44,5 @@
             ports:
               - protocol: TCP
                 port: 4200
-                targetPort: 4200
+                targetPort: 8080
             type: LoadBalancer
