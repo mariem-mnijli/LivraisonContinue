@@ -12,7 +12,9 @@ pipeline {
 
  stage("Build") {
             steps {
+             nodejs(nodeJSInstallationName:'16.14.2'){
                 sh "ng build --configuration production"
+              }
             }
         }
  
