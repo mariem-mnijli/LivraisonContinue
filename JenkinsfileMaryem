@@ -5,7 +5,7 @@ pipeline {
       steps {
         git branch : 'master',
         url: 'https://github.com/mariem-mnijli/LivraisonContinue.git',
-        credentialsId: '29cf0b22-346f-46ff-939e-0a64fa935f8c';
+        credentialsId: '36a181a6-afae-40ee-a825-ed195d7ec139';
         echo 'checkout stage'
            }
   }
