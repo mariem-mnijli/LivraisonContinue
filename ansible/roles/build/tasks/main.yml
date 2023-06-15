@@ -1,4 +1,4 @@
 ---
 # tasks file for build
 - name: build app
-  shell: npm install --legacy-peer-deps
+  shell: ng build --configuration production
