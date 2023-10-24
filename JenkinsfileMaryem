@@ -18,7 +18,7 @@ pipeline {
  stage('Docker Login'){
             steps{
 			
-                sh 'docker login -u mariemmnijli -p 203JMT1107'
+                sh 'docker login -u .. -p ..'
             }
         }
  stage("Docker-Registry") {
